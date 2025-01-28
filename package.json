@@ -1,7 +1,8 @@
 {
   "scripts": {
     "build": "webpack",
-    "server": "webpack serve"
+    "server": "webpack serve",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "@babel/core": "^7.26.7",

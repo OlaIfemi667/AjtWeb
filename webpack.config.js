@@ -5,7 +5,10 @@ const { Server } = require("http");
 
 module.exports = {
   mode: "development",
-  entry: {main: "./src/index.js"},
+  entry: {
+    main: "./src/index.js",
+    module:"./src/module.js"
+  },
   output: {
     filename: '[name][contentfhash].js',
     path: path.resolve(__dirname, "dist"),
