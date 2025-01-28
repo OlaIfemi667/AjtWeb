@@ -227,7 +227,7 @@ header{
     gap: 1px;
 }
 
-#side-bar-bottom a{
+#side-bar-bottom div{
   text-decoration: none;
   color: black;
     display: flex;
@@ -241,7 +241,7 @@ header{
     box-sizing: border-box;
 }
 
-#side-bar-bottom a:hover{
+#side-bar-bottom div:hover{
   background-color: #0C7025;
   border-radius: 0.5em;
   color: white;
@@ -257,6 +257,7 @@ header{
     background-color: #eaeaea;
     padding: 40px 30px;
     width: 80%;
+    height: 120%;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -265,6 +266,56 @@ header{
 }
 #content h2{
     color: #0C7025;
+}
+
+.form-section{
+  padding-left: 18em;
+  padding-right: 18em;
+}
+.form-section form{
+  background-color: white;
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour le formulaire */
+  display: grid;
+  grid-template-columns: 45% 45% ; 
+  gap: 40px; 
+  margin-bottom: 20px; 
+  justify-content: center;
+}
+
+form input{
+  height: 4em;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+/* Optional: Customize focus style */
+input:focus, textarea:focus, select:focus {
+  border: 2px solid #0C7025; /* Example of a subtle border */
+  box-shadow: none;      /* Remove any default box shadow */
+}
+form div{
+  display: flex;
+  flex-direction: column;
+
+}
+button{
+  height: 50px;
+  width: 150px;
+  background-color: white;
+  border: 1px solid #0C7025;
+  box-shadow: #0C7025 5px 5px;
+}
+button:hover{
+  height: 50px;
+  width: 150px;
+  background-color: white;
+  border: 1px solid #0C7025;
+  box-shadow: #0C7025 10px 10px;
 }
 .userInfo{
     width: 30%;
@@ -296,3 +347,4 @@ header{
     border-radius: 0.5em;
 
 }
+

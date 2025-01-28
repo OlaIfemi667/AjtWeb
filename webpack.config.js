@@ -1,12 +1,13 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { Server } = require("http");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: {main: "./src/index.js"},
   output: {
-    filename: "main.js",
+    filename: '[name][contentfhash].js',
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
@@ -32,6 +33,16 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          },
+        }
       },
     ],
   },
