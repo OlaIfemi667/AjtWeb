@@ -1,26 +1,38 @@
-// webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { Server } = require("http");
 
 module.exports = {
   mode: "development",
   entry: {
     main: "./src/index.js",
-    module:"./src/module.js"
+    module: "./src/module.js",
   },
   output: {
-    filename: '[name][contentfhash].js',
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+    publicPath: "/",
   },
   devtool: "eval-source-map",
   devServer: {
-    watchFiles: ["./src/template.html"],
+    watchFiles: ["./src/template.html", "./src/howto.html", "./src/help.html", "./src/faq.html"],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
+      filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/howto.html",
+      filename: "howto.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/help.html",
+      filename: "help.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/faq.html",
+      filename: "faq.html",
     }),
   ],
   module: {
@@ -41,11 +53,11 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
+            presets: ["@babel/preset-env"],
           },
-        }
+        },
       },
     ],
   },

@@ -140,3 +140,55 @@ export const avocatContentCode = `
     <button type="submit">Envoyer</button>
 </div>
 `
+
+export const bureauxContentCode = `
+<h2>Formulaire Bureau</h2>
+<div id="bureauForm" class="form-section">
+    <form action="/submit_bureau" method="post">
+        <div>
+            <label for="designation_bureau">Désignation :</label>
+            <input type="text" id="designation_bureau" name="designation_bureau" required>
+        </div>
+        <div>
+            <label for="description_bureau">Description :</label>
+            <textarea id="description_bureau" name="description_bureau" rows="4" required></textarea>
+        </div>
+        
+    </form>
+    <button type="submit">Envoyer</button>
+</div>
+`
+
+export const divisionsContentCode = `
+<h2>Formulaire Division</h2>
+<div id="divisionForm" class="form-section">
+    <form action="/submit_division" method="post">
+        <div>
+            <label for="designation_division">Désignation :</label>
+            <input type="text" id="designation_division" name="designation_division" required>
+        </div>
+        <div>
+            <label for="description_division">Description :</label>
+            <textarea id="description_division" name="description_division" rows="4" required></textarea>
+        </div>
+    </form>
+    <button type="submit">Envoyer</button>
+</div>
+`
+
+export const natureContentCode = `
+<h2>Formulaire Nature</h2>
+<div id="natureForm" class="form-section">
+    <form action="/submit_nature" method="post">
+        <div>
+            <label for="designation_nature">Désignation :</label>
+            <input type="text" id="designation_nature" name="designation_nature" required>
+        </div>
+        <div>
+            <label for="description_nature">Description :</label>
+            <textarea id="description_nature" name="description_nature" rows="4" required></textarea>
+        </div>
+    </form>
+    <button type="submit">Envoyer</button>
+</div>
+`

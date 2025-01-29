@@ -1,5 +1,5 @@
 import "./styles.css";
-import { accueilContentCode, dossiersContentCode, avocatContentCode } from "./module";
+import { accueilContentCode, dossiersContentCode, avocatContentCode, bureauxContentCode, divisionsContentCode, natureContentCode } from "./module";
 function SideLinkContentDisplay(code) {
   var content = document.querySelector("#content");
   content.innerHTML = code;
@@ -20,16 +20,16 @@ function loadActivePage() {
         SideLinkContentDisplay(avocatContentCode);
         break;
       case "Bureaux":
-        SideLinkContentDisplay("Bureaux");
+        SideLinkContentDisplay(bureauxContentCode);
         break;
       case "Divisions":
-        SideLinkContentDisplay("Divisions");
+        SideLinkContentDisplay(divisionsContentCode);
         break;
       case "Natures":
-        SideLinkContentDisplay("Natures");
+        SideLinkContentDisplay(natureContentCode);
         break;
       default:
-        SideLinkContentDisplay("Bienvenue"); // Contenu par défaut
+        SideLinkContentDisplay(accueilContentCode); // Contenu par défaut
         break;
     }
 
@@ -73,13 +73,13 @@ function main() {
           SideLinkContentDisplay(avocatContentCode);
           break;
         case "Bureaux":
-          SideLinkContentDisplay("Bureaux");
+          SideLinkContentDisplay(bureauxContentCode);
           break;
         case "Divisions":
-          SideLinkContentDisplay("Divisions");
+          SideLinkContentDisplay(divisionsContentCode);
           break;
         case "Natures":
-          SideLinkContentDisplay("Natures");
+          SideLinkContentDisplay(natureContentCode);
           break;
         default:
           break;
